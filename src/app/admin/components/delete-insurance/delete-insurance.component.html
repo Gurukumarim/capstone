@@ -1,0 +1,6 @@
+<form #deleteForm="ngForm" (ngSubmit)="onDelete(deleteForm)">
+    <label for="insuranceId">Insurance Id</label>
+        <input type="insuranceId"  name="insuranceId" #insuranceId="ngModel" [(ngModel)]="insurance.insuranceId" placeholder="Enter InsuranceId">
+
+<input type="submit" value="Delete">
+</form>

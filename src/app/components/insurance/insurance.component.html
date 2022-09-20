@@ -1,0 +1,14 @@
+
+
+<ol [ngStyle]="{'list-style-type':'none'}">
+    <li *ngFor="let insurance of insuranceObs$|async">
+        <h4>
+            Insurance Name : {{insurance.insuranceName}}<br>
+            Insurance Id : {{insurance.insuranceId}}
+        
+            
+
+            <button (click)="show(insurance.insuranceId)">Show Details</button>
+        </h4>
+    </li>
+</ol>

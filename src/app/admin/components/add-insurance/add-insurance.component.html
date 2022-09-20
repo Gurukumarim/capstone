@@ -1,0 +1,36 @@
+<form #addForm="ngForm" (ngSubmit)="onSubmit(addForm)">
+<table>
+    <tr>
+        <td><label for="insuranceName">Insurance Name</label></td>
+        <td><input type="insuranceName"  name="insuranceName" #insuranceName="ngModel" [(ngModel)]="insurance.insuranceName"></td>
+        <!-- <td><select name="insuranceName" [(ngModel)]="insurance.insuranceName">
+            <option [ngValue]="insuranceNames" *ngFor="let insurance of insuranceNames">{{insurance}}</option>
+        </select></td> -->
+    </tr>
+   
+    <tr>
+        <td><label for="plan">Plan</label></td>
+        <!-- <td><input type="plan"  name="plan" #plan="ngModel" [(ngModel)]="insurance.plan"></td> -->
+        <td><select name="plan" [(ngModel)]="insurance.plan">
+            <option [ngValue]="plan" *ngFor="let plan of plans">{{plan}}</option>
+        </select></td>
+    </tr>
+    <tr>
+        <td><label for="duration">Duration</label></td>
+        <td><input type="duration"  name="duration" #duration="ngModel" [(ngModel)]="insurance.duration"></td>
+    </tr>
+    <tr>
+        <td><label for="sumAssured">SumAssured</label></td>
+        <td><input type="sumAssured" name="sumAssured" #sumAssured="ngModel" [(ngModel)]="insurance.sumAssured"></td>
+    </tr>
+    <tr>
+        <td><label for="premium">premium</label></td>
+        <td><input type="premium" name="premium" #premium="ngModel" [(ngModel)]="insurance.premium"></td>
+    </tr>
+    
+    <tr>
+        <td><input type="submit" value="Add Insurance"></td>
+    </tr>
+</table>
+
+</form>
